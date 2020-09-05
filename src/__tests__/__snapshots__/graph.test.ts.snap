@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`graph builds a graph 1`] = `
+Object {
+  "incoming": Map {
+    "one" => Set {},
+    "two" => Set {
+      "one",
+    },
+    "three" => Set {
+      "two",
+    },
+    "four" => Set {
+      "two",
+      "three",
+    },
+  },
+  "nodes": Set {
+    "one",
+    "two",
+    "three",
+    "four",
+  },
+  "outgoing": Map {
+    "one" => Set {
+      "two",
+    },
+    "two" => Set {
+      "three",
+      "four",
+    },
+    "three" => Set {
+      "four",
+    },
+    "four" => Set {},
+  },
+}
+`;
